@@ -4,11 +4,25 @@ Go Language Study
 cd /workspace/GoLangStudy/src/github.com/Mineru98/GoLangStudy
 
 // 빌드
-go build -o  /workspace/GoLangStudy/autobench-server/bin//main $(find /workspace/GoLangStudy/autobench-server/ -name *.go) && /workspace/GoLangStudy/autobench-server/bin//main
+export GOPATH="/workspace/GoLangStudy"
+go build -o /workspace/GoLangStudy/src/autobench-server/bin//main $(find /workspace/GoLangStudy/src/autobench-server/ -name *.go) && /workspace/GoLangStudy/src/autobench-server/bin//main
 
-// 실행 (1)
-/workspace/GoLangStudy/src/github.com/Mineru98/GoLangStudy/bin//main
+// Singup
+https://autobench-server.run.goorm.io/api/account/signup
+{
+	"_id":1,
+	"uid":"daslkjdfsaslkjfklasdjf",
+	"pw": "123456789",
+	"uname":"Test",
+	"profile_img":"",
+	"point":2
+}
 
-// 실행 (2)
-go run /workspace/GoLangStudy/src/github.com/Mineru98/GoLangStudy/main.go
+// Singin
+https://autobench-server.run.goorm.io/api/account/signin
+{
+	"uname":"Test",
+	"pw":"123456789",
+	"uid":"daslkjdfsaslkjfklasdjf"
+}
 ```
