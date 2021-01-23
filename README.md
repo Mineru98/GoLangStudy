@@ -22,7 +22,7 @@ go get github.com/golang/example/template
 ```
 
 ## 참고 자료
-http://golang.site/go/article/4-Go-%EB%B3%80%EC%88%98%EC%99%80-%EC%83%81%EC%88%98
+http://golang.site/go/article/14-Go-%EC%BB%AC%EB%A0%89%EC%85%98---Map
 
 https://mingrammer.com/go-modules-private-repo/
 
