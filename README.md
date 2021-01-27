@@ -1,18 +1,21 @@
 # GoLangStudy
 
 ## 초기 설정
+
 ```sh
 touch go.mod
 touch go.sum
 ```
 
 ## 빌드
+
 ```sh
 // 크로스 플렛폼 배포 빌드 코드
 GOOS=linux GOARCH=amd64 go build main.go
 ```
 
 ## 패키지 설치(예시)
+
 ```sh
 go get github.com/golang/example/appengine-hello
 go get github.com/golang/example/gotypes
@@ -22,20 +25,16 @@ go get github.com/golang/example/template
 ```
 
 ## 종속성 관리
+
 ```sh
-// dep 설치
-go get -u github.com/golang/dep/cmd/dep
-// 패키지 위치 이동
-cd $SOURCEDIR
-// 기본 설정
-dep init
-// 실패를 대비하는 dep 코드
-dep init -v
-// 종속성 추가
-dep ensure -add github.com/gin-gonic/gin
+go mod init $PATH
+cat go.mod
+go get $URL
+cat go.sum
 ```
 
 ## 참고 자료
+
 https://brownbears.tistory.com/category/%EC%96%B8%EC%96%B4/Golang
 
 https://mingrammer.com/go-modules-private-repo/
@@ -43,6 +42,7 @@ https://mingrammer.com/go-modules-private-repo/
 https://ingeec.tistory.com/106
 
 ## Go CLI Argument
+
 - build : 패키지 및 종속성을 컴파일
 - clean : 오브젝트 파일 및 캐시된 파일 제거
 - doc : 패키지 또는 기호에 대한 설명서 표시

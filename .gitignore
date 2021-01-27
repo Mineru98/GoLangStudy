@@ -1,3 +1,7 @@
 goorm.manifest
 pkg/*
 bin/*
+src/*
+!src/api/*
+!src/routine/*
+!src/example/*
