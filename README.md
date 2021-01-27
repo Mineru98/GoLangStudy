@@ -21,6 +21,20 @@ go get github.com/golang/example/stringutil
 go get github.com/golang/example/template
 ```
 
+## 종속성 관리
+```sh
+// dep 설치
+go get -u github.com/golang/dep/cmd/dep
+// 패키지 위치 이동
+cd $SOURCEDIR
+// 기본 설정
+dep init
+// 실패를 대비하는 dep 코드
+dep init -v
+// 종속성 추가
+dep ensure -add github.com/gin-gonic/gin
+```
+
 ## 참고 자료
 https://brownbears.tistory.com/category/%EC%96%B8%EC%96%B4/Golang
 
