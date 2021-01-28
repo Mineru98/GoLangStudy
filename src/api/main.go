@@ -13,7 +13,7 @@ var router *gin.Engine
 func init() {
   // mysql.Sync()
   router = gin.New()
-  router.Use(cors.CorsMiddleware)
+  router.Use(cors.New) // Cors 정책 설정
   app := router.Group("/v1")
   v1.InitRoutes(app)
 }
