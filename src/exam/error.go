@@ -10,10 +10,12 @@ type error interface {
 	Error() string
 }
 
+/*
 func otherFunc(filePath string) (f string, err string) {
 	f, err = os.Open(filePath)
 	return
 }
+*/
 
 func main() {
 	// Error 처리

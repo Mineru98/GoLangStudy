@@ -4,4 +4,4 @@ bin/*
 src/*
 !src/api
 !src/routine
-!src/example
+!src/exam
