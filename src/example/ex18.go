@@ -5,12 +5,12 @@ import (
 	"time"
 )
 
-func sendChan(ch chan <- string) {
+func sendChan(ch chan<- string) {
 	ch <- "Data"
 }
 
-func receiveChan(ch <- chan string) {
-	data := <- ch
+func receiveChan(ch <-chan string) {
+	data := <-ch
 	fmt.Println(data)
 }
 
@@ -37,7 +37,7 @@ func main() {
 		ch <- 123
 	}()
 	var i int
-	i = <- ch
+	i = <-ch
 	fmt.Println(i)
 	fmt.Println()
 	/*
@@ -50,16 +50,16 @@ func main() {
 	*/
 	done := make(chan bool)
 	go func() {
-		for i:= 0; i < 10; i++ {
+		for i := 0; i < 10; i++ {
 			fmt.Println(i)
 		}
 		done <- true
 	}()
-	
-	result := <- done
+
+	result := <-done
 	fmt.Println(result)
 	fmt.Println()
-	
+
 	// Go 채널 버퍼링
 	/*
 		Go 채널은 2가지 채널이 있다.
@@ -76,7 +76,7 @@ func main() {
 	c <- 101
 	fmt.Println(<-c)
 	fmt.Println()
-	
+
 	// 채널 파라미터
 	/*
 		채널을 함수의 파라미터도 전달할 때, 일반적으로 송수신을 모두 하는 채널을 전달하지만,
@@ -85,34 +85,34 @@ func main() {
 		수신 파라미터는 (p <- chan int) 와 같이 <-chan 을 사용한다.
 		만약 송신 채널 파라미터에서 수신을 한다거나, 수신 채널에 송신을 하게 되면, 에러가 발생한다.
 	*/
-	
+
 	chex := make(chan string, 1)
 	sendChan(chex)
 	receiveChan(chex)
 	fmt.Println()
-	
+
 	// 채널 닫기
 	chClose := make(chan int, 2)
 	chClose <- 1
 	chClose <- 2
-	
+
 	close(chClose)
-	
+
 	fmt.Println(<-chClose)
 	fmt.Println(<-chClose)
 	if _, success := <-chClose; !success {
 		println("더이상 데이타 없음.")
 	}
 	fmt.Println()
-	
+
 	// 채널 range문
 	chRan := make(chan int, 2)
-	
+
 	chRan <- 1
 	chRan <- 2
-	
+
 	close(chRan)
-	
+
 	// for {
 	// 	if i, success := <-chRan; success {
 	// 		fmt.Println(i)
@@ -120,24 +120,24 @@ func main() {
 	// 		break
 	// 	}
 	// }
-	
+
 	for i := range chRan {
 		fmt.Println(i)
 	}
 	fmt.Println()
-	
+
 	// 채널 select문
 	done1 := make(chan bool)
 	done2 := make(chan bool)
-	
+
 	go run1(done1)
 	go run2(done2)
 EXIT:
 	for {
 		select {
-		case <- done1:
+		case <-done1:
 			fmt.Println("run1 완료")
-		case <- done2:
+		case <-done2:
 			fmt.Println("run2 완료")
 			break EXIT
 		}

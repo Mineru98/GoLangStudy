@@ -23,6 +23,6 @@ func main() {
 	}
 	fmt.Println(f.Name())
 	fmt.Println()
-	
+
 	// 활용 방법은 좀 더 알아야 할 듯...
 }

@@ -18,7 +18,7 @@ func main() {
 	fmt.Println(next())
 	fmt.Println(next())
 	fmt.Println(next())
-	
+
 	nextOther := nextVal()
 	fmt.Println(nextOther())
 	fmt.Println(nextOther())

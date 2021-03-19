@@ -8,20 +8,20 @@ func main() {
 	// 변수
 	var a int
 	var f float32 = 3.14
-	fmt.Println(a,f)
+	fmt.Println(a, f)
 	a = 10
 	f = 2.
-	fmt.Println(a,f)
+	fmt.Println(a, f)
 	var i, j, k int
 	i, j, k = 1, 2, 3
-	fmt.Println(i,j,k)
+	fmt.Println(i, j, k)
 	// 상수
 	const b int = 20
 	const s string = "Hi"
 	const (
-		Visa = "Visa"
+		Visa   = "Visa"
 		Master = "MasterCard"
-		Amex = "American Express"
+		Amex   = "American Express"
 	)
 	fmt.Println(Visa, Master, Amex)
 	// 키워드

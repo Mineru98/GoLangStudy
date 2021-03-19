@@ -6,7 +6,7 @@ import (
 
 type Person struct {
 	name string
-	age int
+	age  int
 }
 
 type dict struct {
@@ -26,14 +26,14 @@ func main() {
 	p.age = 24
 	fmt.Println(p)
 	fmt.Println()
-	
+
 	_p := new(Person)
 	_p.name = "Kim"
 	_p.age = 25
 	fmt.Println(_p)
 	fmt.Println(*_p)
 	fmt.Println()
-	
+
 	// 생성자
 	dic := newDict()
 	dic.data[1] = "A"

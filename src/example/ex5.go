@@ -1,4 +1,4 @@
-package main
+spackage main
 
 import (
 	"fmt"
@@ -12,7 +12,7 @@ func main() {
 	}
 	fmt.Println(sum)
 	fmt.Println()
-	
+
 	// 조건식만 쓰는 for 문
 	n := 1
 	for n < 100 {
@@ -20,14 +20,14 @@ func main() {
 	}
 	fmt.Println(n)
 	fmt.Println()
-	
+
 	// for range 문
 	names := []string{"빌 게이츠", "스티브 잡스", "제프 베조스"}
 	for idx, name := range names {
 		fmt.Println(idx, name)
 	}
 	fmt.Println()
-	
+
 	// break, continue, goto
 	var a = 1
 	for a < 15 {
@@ -40,13 +40,13 @@ func main() {
 			break
 		}
 	}
-	
+
 	fmt.Println(a)
 	if a == 11 {
 		goto END
 	}
 	fmt.Println(a)
-	
-	END:
-		fmt.Println("End\n")
+
+END:
+	fmt.Println("End\n")
 }

@@ -25,21 +25,21 @@ func main() {
 		}
 		return s
 	}
-	result := sum(1,2,3,4,5)
+	result := sum(1, 2, 3, 4, 5)
 	fmt.Println(result)
 	fmt.Println()
-	
+
 	// 일급함수
 	add := func(i int, j int) int {
 		return i + j
 	}
-	
+
 	r1 := calc(add, 10, 20)
 	fmt.Println(r1)
-	r2 := calc(func(x int, y int) int {return x - y}, 10, 20)
+	r2 := calc(func(x int, y int) int { return x - y }, 10, 20)
 	fmt.Println(r2)
 	fmt.Println()
-	
+
 	// type문을 사용한 함수 원형 정의
 	r3 := t_calc(add, 30, 40)
 	fmt.Println(r3)

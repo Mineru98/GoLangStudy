@@ -16,28 +16,28 @@ func main() {
 	}
 	fmt.Println(tickers)
 	fmt.Println()
-	
+
 	// Using Map
 	var m map[int]string
-	
+
 	m = make(map[int]string)
 	m[1] = "val1"
 	m[11] = "val11"
 	m[111] = "val111"
 	fmt.Println(m)
-	
+
 	str := m[111]
 	fmt.Println(str)
-	
+
 	delete(m, 11)
 	fmt.Println(m)
 	fmt.Println()
-	
+
 	// Map Key Check
 	stocks := map[string]string{
 		"GOOG": "Google Inc",
 		"MSFT": "Microsoft",
-		"FB": "Facebook",
+		"FB":   "Facebook",
 		"AMZN": "Amazon",
 	}
 	_, exists := stocks["MSFT"]
@@ -47,9 +47,9 @@ func main() {
 		fmt.Println("Has MSFT stocks")
 	}
 	fmt.Println()
-	
+
 	// using for loop Map
-	for key, val := range stocks{
+	for key, val := range stocks {
 		fmt.Println(key, val)
 	}
 	fmt.Println()
