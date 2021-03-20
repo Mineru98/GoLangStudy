@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	// 슬라이스에 있는 숫자들을 더하기 위해 range를 사용한다.
-	// 배열에서도 똑같이 동작한다.
+	// 배열에서도 똑같이 동작q한다.
 	nums := []int{2, 3, 4}
 	sum := 0
 	for _, num := range nums {
