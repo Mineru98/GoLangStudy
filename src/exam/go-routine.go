@@ -17,9 +17,9 @@ func main() {
 	// 다중 CPU처리(멀티 코어 프로세싱)
 	runtime.GOMAXPROCS(runtime.NumCPU()) // 현재 CPU의 모든 코어 개수만큼 사용
 
-	// Go루틴
 	say("Sync") // 함수를 동기적으로 실행
 
+	// Go 루틴
 	// 함수를 비동기적으로 실행
 	go say("Async1")
 	go say("Async2")
