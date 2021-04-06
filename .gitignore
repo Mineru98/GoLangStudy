@@ -6,3 +6,4 @@ src/*
 !src/routine
 !src/exam
 !src/workbook
+.DS_Store
